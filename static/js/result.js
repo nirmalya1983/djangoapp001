@@ -642,44 +642,35 @@
 		{
 			"dailyconfirmed": "871",
 			"dailydeceased": "22",
-			"dailyrecovered": "153",
+			"dailyrecovered": "151",
 			"date": "10 April ",
 			"totalconfirmed": "7600",
 			"totaldeceased": "252",
-			"totalrecovered": "788"
-		},
-		{
-			"dailyconfirmed": "818",
-			"dailydeceased": "38",
-			"dailyrecovered": "161",
-			"date": "11 April ",
-			"totalconfirmed": "8418",
-			"totaldeceased": "290",
-			"totalrecovered": "949"
+			"totalrecovered": "786"
 		}
 	],
 	"statewise": [
 		{
-			"active": "7181",
-			"confirmed": "8417",
-			"deaths": "287",
-			"deltaconfirmed": "818",
-			"deltadeaths": "38",
-			"deltarecovered": "161",
-			"lastupdatedtime": "11/04/2020 22:20:24",
-			"recovered": "949",
+			"active": "7186",
+			"confirmed": "8446",
+			"deaths": "288",
+			"deltaconfirmed": "847",
+			"deltadeaths": "39",
+			"deltarecovered": "186",
+			"lastupdatedtime": "11/04/2020 23:35:24",
+			"recovered": "972",
 			"state": "Total",
 			"statecode": "TT"
 		},
 		{
-			"active": "1446",
+			"active": "1426",
 			"confirmed": "1761",
 			"deaths": "127",
 			"deltaconfirmed": "187",
 			"deltadeaths": "17",
-			"deltarecovered": "0",
-			"lastupdatedtime": "11/04/2020 21:20:24",
-			"recovered": "188",
+			"deltarecovered": "20",
+			"lastupdatedtime": "11/04/2020 22:35:24",
+			"recovered": "208",
 			"state": "Maharashtra",
 			"statecode": "MH"
 		},
@@ -720,10 +711,10 @@
 			"statecode": "TG"
 		},
 		{
-			"active": "554",
-			"confirmed": "678",
+			"active": "576",
+			"confirmed": "700",
 			"deaths": "8",
-			"deltaconfirmed": "117",
+			"deltaconfirmed": "139",
 			"deltadeaths": "5",
 			"deltarecovered": "56",
 			"lastupdatedtime": "11/04/2020 22:20:25",
@@ -770,12 +761,12 @@
 		{
 			"active": "451",
 			"confirmed": "529",
-			"deaths": "39",
+			"deaths": "40",
 			"deltaconfirmed": "78",
-			"deltadeaths": "3",
-			"deltarecovered": "0",
-			"lastupdatedtime": "11/04/2020 16:35:25",
-			"recovered": "39",
+			"deltadeaths": "4",
+			"deltarecovered": "1",
+			"lastupdatedtime": "11/04/2020 23:35:25",
+			"recovered": "38",
 			"state": "Madhya Pradesh",
 			"statecode": "MP"
 		},
@@ -852,25 +843,25 @@
 			"statecode": "WB"
 		},
 		{
-			"active": "37",
-			"confirmed": "50",
+			"active": "41",
+			"confirmed": "54",
 			"deaths": "1",
-			"deltaconfirmed": "0",
+			"deltaconfirmed": "4",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
-			"lastupdatedtime": "11/04/2020 00:20:26",
+			"lastupdatedtime": "11/04/2020 23:35:26",
 			"recovered": "12",
 			"state": "Odisha",
 			"statecode": "OR"
 		},
 		{
-			"active": "45",
-			"confirmed": "61",
+			"active": "48",
+			"confirmed": "64",
 			"deaths": "1",
-			"deltaconfirmed": "1",
+			"deltaconfirmed": "4",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
-			"lastupdatedtime": "10/04/2020 10:35:27",
+			"lastupdatedtime": "11/04/2020 23:35:28",
 			"recovered": "15",
 			"state": "Bihar",
 			"statecode": "BR"
@@ -960,14 +951,14 @@
 			"statecode": "CT"
 		},
 		{
-			"active": "6",
+			"active": "2",
 			"confirmed": "7",
 			"deaths": "0",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
-			"deltarecovered": "0",
-			"lastupdatedtime": "04/04/2020 09:42:27",
-			"recovered": "1",
+			"deltarecovered": "4",
+			"lastupdatedtime": "11/04/2020 23:26:44",
+			"recovered": "5",
 			"state": "Goa",
 			"statecode": "GA"
 		},
@@ -1436,6 +1427,16 @@
 			"totalpositivecases": "6872",
 			"totalsamplestested": "161330",
 			"updatetimestamp": "10/04/2020 09:00: pm"
+		},
+		{
+			"positivecasesfromsamplesreported": "600",
+			"samplereportedtoday": "17143",
+			"source": "https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_11April_9PM_IST.pdf",
+			"testsconductedbyprivatelabs": "",
+			"totalindividualstested": "164773",
+			"totalpositivecases": "7703",
+			"totalsamplestested": "179374",
+			"updatetimestamp": "11/04/2020 09:00: pm"
 		}
 	]
 }

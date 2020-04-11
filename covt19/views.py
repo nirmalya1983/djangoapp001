@@ -9,9 +9,12 @@ import json
 
 
 def index(request):
+    baseUrl=request.build_absolute_uri()[:-1]
+    print(baseUrl)
     template = loader.get_template('./index.html')
     prepare_data()
-    context = {'HeadText':'Stats by Date'}
+    context = {'HeadText':'Stats by Date',
+              'baseUrl':baseUrl}
     #HeadText='Stats by Date'
     return HttpResponse(template.render(context, request));
 
@@ -26,8 +29,11 @@ def prepare_data():
         F1.close()
 
 def ind_states(request):
+    baseUrl=request.build_absolute_uri()[:-1*len('/ind_state')]
+    print(baseUrl)
     template = loader.get_template('./indbyStates.html')
-    context = {'HeadText':'Stats by State'}
+    context = {'HeadText':'Stats by State',
+    'baseUrl':baseUrl}
     return HttpResponse(template.render(context, request));
 
 

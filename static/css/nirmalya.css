@@ -15,7 +15,7 @@ nav * {
 
 tbody {
     display:block;
-    height:80vh;
+    height:75vh;
     overflow:auto;
 }
 thead, tbody tr {
@@ -155,4 +155,6 @@ width:100vw;
 
 th,td {
   text-align: center!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
