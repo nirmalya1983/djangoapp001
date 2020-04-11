@@ -23,9 +23,10 @@ thead, tbody tr {
     width:100%;
     table-layout:fixed;
 }
-thead {
-    
+.table .thead-dark th {
+  color:#fcf803;
 }
+
 .sk-folding-cube {
   margin: 20px auto;
   width: 60px;

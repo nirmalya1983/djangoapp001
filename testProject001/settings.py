@@ -25,7 +25,7 @@ SECRET_KEY = 'kn9(48c6+5m!tsk6uzpt^84^=h_j%oxb0fbyu^&k(9434#9dgb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nirmalyaapp1.herokuapp.com']
+ALLOWED_HOSTS = ['nirmalyaapp1.herokuapp.com','127.0.0.1']
 
 
 # Application definition
