@@ -4,7 +4,7 @@ $(document).ready(function () {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         //console.log(myObj);
-		populateVueData(myObj,stopOnloading)
+		populateVueData(myObj,stopOnloading())
     }
     if (this.readyState == 4 && this.status != 200){
     	console.log("error in getting data:"+str(this.status))
@@ -21,7 +21,7 @@ function populateVueData(datain,callback){
 		items: datain
 		}
 	})
-	setTimeout(callback,10)
+	callback
 }
 function stopOnloading(){
 	$("#onLoading").addClass("d-none");
