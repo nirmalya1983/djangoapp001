@@ -158,3 +158,6 @@ th,td {
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
+.card-body {
+font-family: 'Concert One', cursive;
+}
