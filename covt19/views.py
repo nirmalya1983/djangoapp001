@@ -11,7 +11,8 @@ import json
 def index(request):
     template = loader.get_template('./index.html')
     prepare_data()
-    context = {'latest_question_list': "abcd"}
+    context = {'HeadText':'Stats by Date'}
+    #HeadText='Stats by Date'
     return HttpResponse(template.render(context, request));
 
 
@@ -23,4 +24,10 @@ def prepare_data():
         F1=open("./static/js/result.js",'wb')
         F1.write(response.content)
         F1.close()
+
+def ind_states(request):
+    template = loader.get_template('./indbyStates.html')
+    context = {'HeadText':'Stats by State'}
+    return HttpResponse(template.render(context, request));
+
 

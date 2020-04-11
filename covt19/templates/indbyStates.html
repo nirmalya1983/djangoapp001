@@ -1,0 +1,49 @@
+{% include "headpart.html" %}
+ 
+  <body class="loadbg pt-5">
+    {% include "spinner.html" %}
+
+  <div class="row d-none pt-4" id="BaseCont">
+    {% include "headNav1.html" %}
+
+    
+  <!--<div class="container text-light"><h1>Details Tables</h1></div>-->
+  {% include "buttonTemp.html" %}
+  <div class="container p-0" id="data1">
+    <table class="table table-bordered table-light table-hover table-sm">
+	<thead class="thead-dark">
+    <tr>
+      <th scope="col">State</th>
+      <th scope="col">Confirmed</th>
+	  <th scope="col">Deaths</th>
+	  <th scope="col">Recovered</th>
+	  <th scope="col">Active</th>
+    </tr>
+	</thead>
+  <tbody>
+    {% verbatim %}
+    <tr v-for="item in items.statewise.slice().reverse()" >
+      <th scope="row" class="text-center">{{item.state}}</th>
+      <td>{{item.confirmed}}</td>
+	  <td>{{item.deaths}}</td>
+	  <td>{{item.recovered}}</td>
+	  <td>{{item.active}}</td>
+    </tr>
+    {% endverbatim %}
+  </tbody>
+</table>
+</div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="./js/nirmalya.js"></script>-->
+  {% load static %}
+<script src="{% static 'js/nirmalya.js' %}"></script>
+	<!--<script src="./js/result.js"></script>-->
+  </body>
+</html>
