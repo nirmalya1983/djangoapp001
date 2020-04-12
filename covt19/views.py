@@ -20,29 +20,33 @@ def index(request):
 
 
 def prepare_data():
-    with open('updatedDate.log','r+') as timelog:
-        lasttime=timelog.read()
-        if lasttime > '':
-            lasttime=float(lasttime)
-        else:
-            lasttime=0.0
-        curtime=time.time()
-        if (curtime-lasttime > 3600):
-            print("Fetching Updated JSON for INDIA Data")
-            response = requests.get("https://api.covid19india.org/data.json")
-            print(response.status_code)
-            if response.status_code == requests.codes.ok:
-                res=response.json()
-                F1=open("./static/js/result.js",'wb')
-                F1.write(response.content)
-                F1.close()
-                timelog.write(str(curtime))
+    timelog=open('updatedDate.log','r')
+    lasttime=timelog.read()
+    if lasttime > '':
+        lasttime=float(lasttime)
+    else:
+        lasttime=0.0
+    timelog.close()
+    curtime=time.time()
+    if (curtime-lasttime > 60):
+        print("Fetching Updated JSON for INDIA Data")
+        timelog2=open('updatedDate.log','w')
+        response = requests.get("https://api.covid19india.org/data.json")
+        print(response.status_code)
+        if response.status_code == requests.codes.ok:
+            res=response.json()
+            F1=open("./static/js/result.js",'wb')
+            F1.write(response.content)
+            F1.close()
+            timelog2.write(str(curtime))
+        timelog2.close()
 
 def ind_states(request):
     baseUrl=request.build_absolute_uri()[:-1*len('/ind_state')]
     template = loader.get_template('./indbyStates.html')
     context = {'HeadText':'Stats by State',
     'baseUrl':baseUrl}
+    prepare_data()
     return HttpResponse(template.render(context, request));
 
 
