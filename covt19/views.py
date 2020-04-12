@@ -49,4 +49,12 @@ def ind_states(request):
     prepare_data()
     return HttpResponse(template.render(context, request));
 
+def ind_test(request):
+    baseUrl=request.build_absolute_uri()[:-1*len('/ind_test')]
+    template = loader.get_template('./indTest.html')
+    context = {'HeadText':'Test Status by Date',
+    'baseUrl':baseUrl}
+    prepare_data()
+    return HttpResponse(template.render(context, request));
+
 
