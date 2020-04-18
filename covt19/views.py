@@ -12,9 +12,10 @@ import time
 def index(request):
     baseUrl=request.build_absolute_uri()[:-1]
     template = loader.get_template('./index.html')
-    prepare_data()
+    items=json.loads(prepare_data())
     context = {'HeadText':'Stats by Date',
-              'baseUrl':baseUrl}
+              'baseUrl':baseUrl, 'items':items}
+
     #HeadText='Stats by Date'
     return HttpResponse(template.render(context, request));
 
@@ -28,7 +29,7 @@ def prepare_data():
         lasttime=0.0
     timelog.close()
     curtime=time.time()
-    if (curtime-lasttime > 60):
+    if (curtime-lasttime > 0):
         print("Fetching Updated JSON for INDIA Data")
         timelog2=open('updatedDate.log','w')
         response = requests.get("https://api.covid19india.org/data.json")
@@ -40,13 +41,15 @@ def prepare_data():
             F1.close()
             timelog2.write(str(curtime))
         timelog2.close()
+        return response.content
 
 def ind_states(request):
     baseUrl=request.build_absolute_uri()[:-1*len('/ind_state')]
     template = loader.get_template('./indbyStates.html')
+    items=json.loads(prepare_data())
     context = {'HeadText':'Stats by State',
-    'baseUrl':baseUrl}
-    prepare_data()
+    'baseUrl':baseUrl, 'items':items}
+    print(items)
     return HttpResponse(template.render(context, request));
 
 def ind_test(request):

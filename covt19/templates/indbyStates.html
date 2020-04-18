@@ -21,15 +21,15 @@
     </tr>
 	</thead>
   <tbody>
-    {% verbatim %}
-    <tr v-for="item in items.statewise.slice().reverse()" >
+    {% for item in items.statewise %}
+    <tr>
       <th scope="row" class="text-center">{{item.state}}</th>
       <td>{{item.confirmed}}</td>
 	  <td>{{item.deaths}}</td>
 	  <td>{{item.recovered}}</td>
 	  <td>{{item.active}}</td>
     </tr>
-    {% endverbatim %}
+    {% endfor %}
   </tbody>
 </table>
 </div>
